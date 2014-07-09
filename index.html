@@ -29,8 +29,8 @@
 
                 BEEN_COLOR = "#3366cc";
                 LIVED_COLOR = "#ffcc22";
-                been = ["IE", "FI", "IT", "FR", "GR", "DE", "PT"];
-                lived = ["GB", "ES"];
+                been = ["IE", "FI", "IT", "FR", "GR", "DE", "PT", "JP", "US", "AR", "TW", "SG", "TH", "CA"];
+                lived = ["GB", "ES", "HK", "CN"];
 
                 dataProvider.areas = []
                 for (i = 0; i < been.length; ++i) {
@@ -42,7 +42,6 @@
                     dataProvider.areas.push({id: lived[i], 
                                              color: LIVED_COLOR});
                 }
-
 
 			    map.dataProvider = dataProvider;
 
