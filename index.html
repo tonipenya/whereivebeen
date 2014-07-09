@@ -25,56 +25,41 @@
 			        balloonText: "[[title]]"
 			    };
 
-			    map.creditsPosition = "top-right";
+			    map.creditsPosition = "bottom-right";
 
-			    dataProvider.areas = [
-				{
-			        id: "IE",
-			        color: "#3366CC"},
-			    {
-			        id: "FI",
-			        color: "#3366CC"},
-			    {
-			        id: "GB",
-			        color: "#FFCC33"},
-                {
-			        id: "IT",
-			        color: "#3366CC"},
-			    {
-			        id: "FR",
-			        color: "#3366CC"},
-			    {
-			        id: "ES",
-			        color: "#FFCC33"},
-			    {
-			        id: "GR",
-			        color: "#3366CC"},
-			    {
-			        id: "DE",
-			        color: "#3366CC"},
-			    {
-			        id: "PT",
-			        color: "#3366CC"},
-			    ];
+                BEEN_COLOR = "#3366cc";
+                LIVED_COLOR = "#ffcc22";
+                been = ["IE", "FI", "IT", "FR", "GR", "DE", "PT"];
+                lived = ["GB", "ES"];
+
+                dataProvider.areas = []
+                for (i = 0; i < been.length; ++i) {
+                    dataProvider.areas.push({id: been[i], 
+                                             color: BEEN_COLOR});
+                }
+
+                for (i = 0; i < lived.length; ++i) {
+                    dataProvider.areas.push({id: lived[i], 
+                                             color: LIVED_COLOR});
+                }
+
 
 			    map.dataProvider = dataProvider;
 
 			    var legend = {
 			        width: 600,
-			        backgroundAlpha: 0.5,
-			        backgroundColor: "#FFFFFF",
-			        borderColor: "#666666",
-			        borderAlpha: 1,
+			        backgroundAlpha: 0,
+			        borderAlpha: 0,
 			        bottom: 15,
 			        left: 15,
 			        horizontalGap: 10,
 			        data: [
 			        {
 			            title: "Been",
-			            color: "#3366CC"},
+			            color: BEEN_COLOR},
 			        {
 			            title: "Lived",
-			            color: "#FFCC33"}
+			            color: LIVED_COLOR}
 			        ]
 			    };
 
