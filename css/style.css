@@ -1,0 +1,24 @@
+body {
+    background-color: #01579b;
+}
+
+h1 {
+    color: white;
+    font-family: arial, helvetica, sans-serif;
+    text-align: center;
+}
+
+#mapdiv {
+    border: 10px solid #e1f5fe;
+    background-color: #b3e5fc;
+    width: 850px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -400px;
+    margin-left:-425px;
+    width: 850px;
+    height: 500px;
+}
+
