@@ -9,6 +9,9 @@ var map;
 AmCharts.ready(function() {
     map = new AmCharts.AmMap();
     map.pathToImages = "ammap/images/";
+    map.zoomControl.panControlEnabled = false;
+    map.zoomControl.buttonFillColor = "#03a9f4";
+    map.zoomControl.top = "300";
 
     var dataProvider = {
         mapVar: AmCharts.maps.worldHigh,
