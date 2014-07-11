@@ -1,25 +1,29 @@
-var map;
+BEEN_COLOR =  "#03a9f4";
+LIVED_COLOR = "#ffab40";
+SEA_COLOR =   "#b3e5fc";
+NON_VISITED_COLOR = "#e1f5fe"; 
+been = ["IE", "FI", "IT", "FR", "GR", "DE", "PT", "JP", "US", "AR", "TW", "SG", "TH", "CA"];
+lived = ["GB", "ES", "HK", "CN"];
 
+var map;
 AmCharts.ready(function() {
     map = new AmCharts.AmMap();
     map.pathToImages = "ammap/images/";
 
     var dataProvider = {
-        mapVar: AmCharts.maps.worldHigh
+        mapVar: AmCharts.maps.worldHigh,
+        zoomLevel: 1.05
     };
 
     map.areasSettings = {
-        unlistedAreasColor: "#DDDDDD",
+        unlistedAreasColor: NON_VISITED_COLOR,
+        unlistedAreasOutlineColor: SEA_COLOR,
+        outlineColor: SEA_COLOR,
         rollOverOutlineColor: "#FFFFFF",
         balloonText: "[[title]]"
     };
 
     map.creditsPosition = "bottom-right";
-
-    BEEN_COLOR = "#3366cc";
-    LIVED_COLOR = "#ffcc22";
-    been = ["IE", "FI", "IT", "FR", "GR", "DE", "PT", "JP", "US", "AR", "TW", "SG", "TH", "CA"];
-    lived = ["GB", "ES", "HK", "CN"];
 
     dataProvider.areas = []
     for (i = 0; i < been.length; ++i) {
